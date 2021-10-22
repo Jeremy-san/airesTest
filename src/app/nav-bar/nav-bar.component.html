@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+
+          <ion-menu-toggle auto-hide="false" >
+            <ion-item lines="none" detail="false">
+              <ion-label routerDirection="root"  [routerLink]="['/HomePage']" >
+                Home
+                </ion-label>
+
+                <ion-label routerDirection="root"  [routerLink]="['/Participants']" >
+                  Participants
+                </ion-label>
+
+                <ion-label routerDirection="root"  [routerLink]="['/Session']" >
+                  Sessions
+                </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+      </ion-content>
+    </ion-menu>
+  </ion-split-pane>
+</ion-app>

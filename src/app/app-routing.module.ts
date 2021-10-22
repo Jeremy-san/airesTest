@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NavBarComponent } from '../../src/app/nav-bar/nav-bar.component';
+import { ParticipantsComponent } from '../app/participants/participants.component';
+import { SessionComponent } from '../app/session/session.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'HomePage', component: NavBarComponent
+  },
+  {
+    path: 'Participants', component: ParticipantsComponent
+  },
+  {
+    path: 'Session', component: SessionComponent
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'HomePage',
     pathMatch: 'full'
   },
 ];
